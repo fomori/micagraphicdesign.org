@@ -1,268 +1,711 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+.shim {
+	width: 100%;
+	margin: 0 auto;
 }
 
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+.red-line {
+	width:100%;
+	height:5px;
+	z-index: 10000;
+	background: none repeat scroll 0% 0% #f6201c;
+    position: fixed;
+    top: 0;
+} /* top red bar */
+		
+		
+* {	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;		
+	        }
+	        
+a:link,
+a:active,
+a:visited {
+	text-decoration: none;
+	color: #000;
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+a:hover {
+	color: #f6201c;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}	
+
+
+.container {
+	position: relative;
+	width: 95%;
+	max-width: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	
+	
+	font-family:'Source Sans Pro', sans-serif;
 }
 
-/*
- * A better looking default horizontal rule
- */
+/* ==================Masthead==================  */
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+.masthead {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	padding: 20px 0 25px;	
+	z-index: 9999;
+	background-color: rgba(255, 255, 255, 1);
+	
 }
 
-/*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
- */
-
-audio,
-canvas,
-img,
-svg,
-video {
-    vertical-align: middle;
+.masthead .container {
+	overflow: visible;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screen readers: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
+.masthead:before,
+.masthead:after,
+.masthead .container:before,
+.masthead .container:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
-.clearfix:after {
+.masthead:after,
+.masthead .container:after {
     clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+/* ==================Main Navigation==================  */
+.masthead .navigation {
+	
+	float: left;
+	
+	margin: 15px 10px 0;
+	
+	/* background: pink; */
 }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+.menu, .menu ul{
+  line-height:1.5;
+  list-style:none;
+  padding:0;
+  margin:0;
+  width: 150px;
+  
+  
+  
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request: h5bp.com/r
-   ========================================================================== */
+.menu ul{
+	display: none;
+	
+}
 
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+.menu:hover ul{
+	display: block;
+	position: absolute; 
+	z-index: 9999999;
+}
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+.menu li a{
+  display:block;
+  padding: .5em;
+  background:black;
+  color:#fff;
+  text-decoration:none;
+  
+}
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+.menu li a:hover{
+  background: #f6201c; 
+  
+}
 
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+.menu input[type="checkbox"] ~ ul li,
+.menu input[type="checkbox"].current:checked ~ ul li{
+  overflow:hidden;
+  transition:.4s ease-in;
+}
+.menu input[type="checkbox"]:checked ~ ul li,
+.menu input[type="checkbox"].current ~ ul li{
+  height:auto;
+}
+.menu input[type="checkbox"]{
+  display:none;
+}
+.menu label{
+  display:block;
+  float:left;
+  content:"";
+  margin-left:-1.5em;
+  width:1.5em;
+  
+  text-align:center;
+  background:black;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+.menu  label:hover{
+  background:#f6201c;
+}
+.menu  label:before,
+/*This flip-reverses the label */
+.menu input[type="checkbox"]:checked ~ label:before{
+  content:"+";
+}
+.menu input[type="checkbox"]:checked.current ~ label:before,
+.menu input[type="checkbox"].current  ~ label:before{
+  content:"-";
+}
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
 
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
+	
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+/* ==================Brand==================  */
 
-    img {
-        max-width: 100% !important;
-    }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+.masthead .brand {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 60px;
+	margin-left: -50px;
+}
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+.masthead .brand .mark {
+	display: block;
+	width: 104px;
+	height: 28px;
+	overflow: hidden;
+	background: url(../img/mica_logo.svg) left top no-repeat;
+}
+
+.masthead .brand a:hover {
+	background: url(../img/mica_logo_r.svg) left top no-repeat;
+	transition: all .3s linear;
+	
+}
+
+
+.item {
+	text-decoration: none;
+	display: inline-block;
+	list-style: none;
+	
+	
+}
+
+
+/* ==================Social Icon==================  */  
+   
+@font-face {
+    font-family: 'socicon';
+    src: url('../socicon/font/socicon-webfont.eot');
+    src: url('font/socicon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../socicon/font/socicon-webfont.woff') format('woff'),
+         url('../socicon/font/socicon-webfont.ttf') format('truetype'),
+         url('../socicon/font/socicon-webfont.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.socicon {
+  position: relative;
+  display: inline-block;
+  font-family: 'socicon';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.masthead .social {
+	float: left; 
+	width: 200px;
+	margin-left: -35px;
+	/* background: green; */
+}
+
+.masthead .social li {
+	padding: .2em .3em 0 0;
+}
+
+/* ==================Login==================  */
+
+.masthead .utility 
+ {
+	float: right;
+	width: 300px;
+	overflow: hidden;
+	/* background: gray; */
+	
+	
+}
+
+.login li {
+	font-size: 10pt;
+	letter-spacing: 1pt;
+	text-decoration: none;
+	display: inline-block;
+	list-style: none;
+	vertical-align: middle;
+
+	
+}
+
+.login > .right {
+	padding-right: .6em;
+	border-right: 1px solid black;
+}
+
+.login img {
+	height: 17px;
+	width: 17px;
+	
+}
+
+.login {
+	display: inline-block;
+	float: right;
+}
+
+/* ==================Search Bar==================  */
+
+.search-img {
+	padding-left: .5em
+}
+
+.search-img:hover {
+	opacity: .6;
+}
+
+.search-input {
+	overflow:hidden;
+	width: 0px;
+	transition-duration:500ms;
+}
+
+.search-input > input {
+  float: right;
+  margin: 0;
+  width: 150px;
+  height: 25px;
+  padding: 0 0 0 .5em;
+  border-style:none;
+  
+  border-radius:30px;
+
+  background-color:transparent;
+  
+  font-size: 10pt;
+  
+  cursor:pointer;
+  overflow:hidden;
+	
+}
+
+.search-input > input:focus
+{
+  cursor:text;
+  color:#000;
+  outline: none;
+  
+}
+
+.show-input + .search-input {
+	width: 150px;
+	transition-duration:500ms;
+}
+
+
+
+/* ==================Content==================  */
+
+.page {
+	max-width: 1500px;
+	margin: 0 auto;
+	overflow: hidden;
+	
+}
+
+
+main {
+	position: relative;
+	display: block;
+	padding-top: 10em;
+}
+
+.filter {
+	position: fixed;
+	top: 80px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	
+	z-index: 1000;
+	background: white;	
+	
+}
+
+
+.formats ul {
+	text-align: center;
+	margin-left: -43px;
+}
+
+
+.formats li {
+	padding-right: .5em;
+	padding-left: .5em;
+	
+	font-size: 10pt;
+}
+
+
+.line-filter {
+	width: 95%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+
+
+
+
+.events.items {
+	text-align: justify;
+}
+
+.events.items:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.events.items .event {
+	width: 100%;
+	margin-bottom: 2.5em;
+	text-align: left;
+}
+
+@media screen and (min-width: 400px) {
+	.heading {
+		font-size: 25pt;
+	}
+	
+	
+}
+
+
+@media screen and (min-width:600px) {
+	.events.items .event {
+		text-decoration: none;
+		display: inline-block;
+		list-style: none;
+		vertical-align: top;
+		width: 48%;
+	}
+	
+	
+}
+
+
+
+@media screen and (min-width: 800px) {
+	.events.items .event {
+		width: 30%;
+	
+	}
+	
+	
+}
+
+@media screen and (min-width: 1000px) {
+	.events.items .event {
+		width: 21%;
+	}
+	
+	.masthead {
+		display: table;
+	}
+	
+	.masthead .navigation {
+		display: table-caption;
+	}
+	.masthead .social {
+		display: table-header-group;
+	}
+	.masthead .utility{
+		display: table-footer-group;
+	}
+}
+
+
+
+.meta {
+	font-family:'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 10pt;
+	
+	
+	z-index: 888;
+	position: relative;
+	text-align: center;	
+
+}
+
+.meta .date {
+	margin: 0 auto 3px;
+}
+
+
+
+.header {
+	text-align: center;
+}
+
+
+.header h2  {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-size: 21pt;
+	margin: 0 auto -16px;
+	z-index: 999;
+	position: relative;
+	text-align: center;
+	}
+
+
+.header h2 a:hover {
+	text-decoration: none;
+	border-bottom: 3px solid #f6201c;
+}
+
+
+.attach img {
+	margin: 0 auto 10px;
+	
+	border: 0;
+	vertical-align: middle;
+	
+	max-width: 100%;
+	height: auto;
+}
+
+
+.copy {
+	text-align: center;
+	font-size: 12pt;
+}
+
+
+.footers .tags {
+	font-family:'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 8pt;
+	font-style: italic;
+	
+	text-align: center;
+	position: relative;
+	
+}
+
+.footers .tags:before {
+	content: '#';
+}
+
+/* ==================Bottom==================  */
+
+
+
+.paging {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 15pt;
+	
+	margin-left: -10px;
+	
+	padding-top: 10px;
+	
+}  /* page numbers */
+
+
+.sub {
+	margin-bottom: 100px;
+	text-align: center;
+	display: block;
+}
+
+.line-sub {
+	border-bottom-style: dotted;
+}
+
+
+.subscribe h3 {
+	font-size: 13pt;
+	font-weight: 400;
+	letter-spacing: .5pt;
+	color: #f6201c;
+	
+	width: 230px;
+	
+	padding-top: 30px;
+	
+	display: inline-block;
+	
+	
+}
+
+.subscribe input:focus {
+  outline: none;
+  
+}
+
+
+.required {	
+	padding: 7px; 
+	width: 200px; 
+	margin-bottom: 8px; 
+	border-bottom: 1px solid #dadada; 
+	border-top-style: none; 
+	border-right-style: none; 
+	border-left-style: none; 
+	
+	font-size: 8pt;
+	font-weight: 200;
+	letter-spacing: .5pt;
+	
+	text-align: center;
+	
+}
+
+.clear input {
+	
+	background: #f1f1f1;
+	
+	color:#898989;
+	font-size:10px;
+	font-weight: 200;
+	
+	padding: 6px 14px;
+	
+	border-radius: .5em;
+	
+	border: none;
+	text-decoration:none;
+	display: inline-block;
+}
+
+
+.clear input:hover {
+	background-color: #f6201c;
+	color: white;
+	transition: all .5s linear;
+}
+
+.rss {
+	text-align: center;
+	display: inline-block;
+	padding-top: 25px;
+	font-size: 8pt;
+	width: 100px;
+	
+	color:#898989;
+	
+}
+
+
+/* ==================Footer==================  */
+.footer {	
+	position: fixed;
+	bottom:0;
+	
+	height:30px;   		
+   
+	z-index: 1000;
+	
+	letter-spacing: 1pt;
+	color: #fff;
+
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+			
+	}
+
+
+
+.departments.menus {
+	font-size: 0;
+	float: left;
+	margin-left: -45px;
+	padding-top: 8px;
+}
+
+.departments.menus .item {
+	font-size: 8pt;
+}
+
+.departments li {
+	z-index: 1000;
+	
+	color: black;
+	
+	padding-right: .6em;
+	padding-left: .6em;
+}
+
+.departments .all {
+	color: #f6201c;
+}
+
+.departments li~li { 
+	border-left: 1px solid #000000;
+
+ }
+
+
+
+.footer .menus .departments {
+	width: 300px;
+}
+
+.footer ul.menu {
+	position: absolute;
+	bottom: 7px;
+	margin: 0;
+	
+}
+
+.footer .legal {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 215px;
+	
+	font-size: 8pt;
+	color: #000;
+	
+	margin: 0;
+	text-align: right;
+	
+}
+
+/* ==================Display None==================  */
+
+.meta .location {
+	display: none;
+}
+
+.footers .categories {
+	display: none;
 }
