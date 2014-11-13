@@ -12,3 +12,14 @@ $(document).ready(function () {
             $('#autoUpdate').fadeOut('slow');
     });
 });
+
+
+var $toggler = $('.navigation.menus > strong');
+
+$toggler.on('click', function () {
+  $(this).toggleClass('active');
+});
+
+$('.navigation.menus > .menu').on('mouseleave', function () {
+  $toggler.removeClass('active');
+});
