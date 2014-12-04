@@ -1,17 +1,5 @@
 /* index */
 
-.page ul {
-	
-	text-transform: uppercase;
-	font-family: 'Montserrat';
-	font-size: 9pt;
-	text-align: center;
-	
-	list-style: none;
-	
-	width: 230px;
-	margin: auto;
-}
 
 .vertical-i {
 	background: linear-gradient(rgba(93,230,240,1),rgba(215,250,118,1),rgba(12,32,245,1));
@@ -649,7 +637,7 @@ main {
 	margin-bottom: 68px;
 }
 
-.page ul li,
+
 .events h1, 
 .gallery h1 {
 	text-align: center;
@@ -669,20 +657,11 @@ main {
 	width: 100px;
 }
 
-.page ul li:hover,
+
 .gallery h1:hover, 
 .events h1:hover{
 	transition: all .3s ease;
 
-}
-
-.page ul li:hover {
-	color: red;
-	border: 3px #aaa solid;
-	
-	-webkit-box-shadow: 4px 4px 0px 0px #aaa;
-	-moz-box-shadow: 4px 4px 0px 0px #aaa;
-	box-shadow: 4px 4px 0px 0px #aaa;
 }
 
 .events h1:hover {
