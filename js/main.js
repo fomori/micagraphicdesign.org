@@ -38,3 +38,29 @@ $('.navigation.menus > .menu').on('mouseleave', function () {
 /* gd blur */
 
 $(".gd").hover(function() { $(this).animate({textShadow: "#aaa 0 0 0"}); }, function() { $(this).animate({textShadow: "#aaa 0 0 10px"}); });
+
+
+
+/*
+$('main.page').waypoint(function(direction) {
+
+  if (direction === 'down') {
+      $('body').addClass('scrollDown');    
+          $('body').removeClass('scrollUp');
+  } else {
+      
+      $('body').removeClass('scrollDown');
+      $('body').addClass('scrollUp');
+  }
+});
+
+$('.formats.menus.segment').waypoint(function(direction){
+	if (direction === 'down') {
+		$('.masthead').addClass('has-border');
+	} else {
+		$('.masthead').removeClass('has-border');
+	}
+},{
+	offset: 70
+});
+*/
